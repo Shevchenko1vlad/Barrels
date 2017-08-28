@@ -1,0 +1,40 @@
+{% load staticfiles %}
+<html>
+ <head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <title>{% block title %}Barrels{% endblock %}</title>
+  <link rel="stylesheet" href="{% static 'barrelsite/index.css' %}" type="text/css">
+ </head>
+<body>
+<form action="#" method="get">
+    <table>
+        <tr>
+        {% for i in enum_upper %}
+            <td>
+                <div class="area_{{ i.1 }}">
+                    {% for j in i.0 %}
+                        <div class="sect">
+                            <input type="submit" value="{{ j }}" name="section_number" class="button" >
+                        </div>
+                    {% endfor %}
+                </div>
+            </td>
+        {% endfor %}
+        </tr>
+        <tr>
+        {% for i in enum_lower %}
+            <td>
+                <div class="area_{{ i.1 }}" >
+                    {% for j in i.0 %}
+                        <div class="sect">
+                            <input type="submit" value="{{ j }}" name="section_number" class="button" >
+                        </div>
+                    {% endfor %}
+                </div>
+            </td>
+        {% endfor %}
+        </tr>
+    </table>
+</form>
+</body>
+</html>

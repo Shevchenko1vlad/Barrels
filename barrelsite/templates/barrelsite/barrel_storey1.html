@@ -1,0 +1,58 @@
+{% load staticfiles %}
+<html>
+ <head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <title>{% block title %}Barrels{% endblock %}</title>
+  <link rel="stylesheet" href="{% static 'barrelsite/barrel_storey1.css' %}" type="text/css">
+  <script rel="script" src="{% static 'barrelsite/jquery-3.1.1.js' %}" type="text/javascript"></script>
+ </head>
+<body>
+    <form action="#">
+    {% for i in barrel_storey1 %}
+        <div class="barrels_storeys">
+            <input type = "submit" value = "{{i}}" class="barrel" name="selected_barrel">
+            {% if i == table_id %}
+            <div class='barrel_table'>
+                <table>
+                    <tr><th>№ п/п</th>
+                        <td><input type="text" name="cell0" value="{{ i }}" class="num_cells" title="№ п/п"></td></tr>
+                    <tr><th>ID бочки</th>
+                        <td><input type="text" name="cell1" value="" class="num_cells" title="Введите ID бочки"></td></tr>
+                    <tr><th>Позиция X</th>
+                        <td><input type="text" name="cell2" value="" class="num_cells" title="Введите позицию X"></td></tr>
+                    <tr><th>Позиция Y</th>
+                        <td><input type="text" name="cell3" value="" class="num_cells" title="Введите позицию Y"></td></tr>
+                    <tr><th>Номер ячейки</th>
+                        <td><input type="text" name="cell4" value="{{ sect_id }}" class="num_cells" title="Номер ячейки"></td></tr>
+                    <tr><th>Номер сектора</th>
+                        <td><input type="text" name="cell4.1" value="{{ set_id }}" class="num_cells" title="Номер сектора"></td></tr>
+                    <tr><th>Номер отсека</th>
+                        <td><input type="text" name="cell5" value="" class="num_cells" title="Введите номер отсека"></td></tr>
+                    <tr><th>№ паспорта</th>
+                        <td><input type="text" name="cell6" value="" class="num_cells" title="Введите номер паспорта"></td></tr>
+                    <tr><th>Классификация РАО</th>
+                        <td><input type="text" name="cell7" value="" class="num_cells" title="Введите классификацию РАО"></td></tr>
+                    <tr><th>Категория РАО</th>
+                        <td><input type="text" name="cell7" value="" class="num_cells" title="Введите категорию РАО"></td></tr>
+                    <tr><th>Вес упаковки</th>
+                        <td><input type="text" name="cell9" value="" class="num_cells" title="Введите вес упаковки"></td></tr>
+                    <tr><th>Нуклид</th>
+                        <td><input type="text" name="cell10" value="" class="num_cells" title="Введите нуклид"></td></tr>
+                    <tr><th>Удельная активность</th>
+                        <td><input type="text" name="cell11" value="" class="num_cells" title="Введите удельную активность"></td></tr>
+                    <tr><th>Сумарная удельная активность</th>
+                        <td><input type="text" name="cell12" value="" class="num_cells" title="Введите сумарную удельную активность"></td></tr>
+                    <tr><th>Дата</th>
+                        <td><input type="text" name="cell13" value="" class="num_cells" title="Введите дату"></td></tr>
+                </table>
+                <div class="submit_table">
+                    <input type="submit" value="submit" title="Press to SUBMIT">
+                </div>
+            </div>
+            {% endif %}
+        </div>
+    {% endfor %}
+    </form>
+    <script rel="script" src="{% static 'barrelsite/barrel_storey.js' %}" type="text/javascript"></script>
+</body>
+</html>

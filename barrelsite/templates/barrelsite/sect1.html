@@ -1,0 +1,20 @@
+{% load staticfiles %}
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <title>{% block title %}Barrels{% endblock %}</title>
+    <link rel="stylesheet" href="{% static 'barrelsite/sect1.css' %}" type="text/css">
+    <script rel="script" src="{% static 'barrelsite/jquery-3.1.1.js' %}" type="text/javascript"></script>
+
+</head>
+<body>
+<form action="#" method="get">
+    <div class="barrels">
+        {% for i in barrels %}
+            <input type="submit" class="button" value="{{ i }}" name="set_id">
+        {% endfor %}
+    </div>
+</form>
+
+</body>
+</html>

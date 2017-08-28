@@ -1,0 +1,61 @@
+.barrel {
+    width: 267px;
+    height: 409px;
+    background-image: url(images/barrel_front_gray.png);
+    background-color: white;
+    border: none;
+    position: relative;
+    color: black;
+    text-align: center;
+    display: inline-block;
+    font-size: 75%;
+    transition: all 0.5s;
+    cursor: pointer;
+    -webkit-transition-duration: 0.4s;
+    transition-duration: 0.4s;
+}
+
+.barrel:hover {
+    background-image: url(images/barrel_front_gray_b.png);
+    border: none;
+}
+
+.barrels_storeys {
+    width: 70%;
+}
+
+table{
+    margin-top: 50px;
+    background: #ebf1fd;
+    border-collapse: collapse;
+    border: 1px solid black;
+    width: 60%;
+}
+td{
+    font-family: "Arial Narrow", cursive;
+    border: 1px solid black;
+}
+
+th{
+    font-family: "Arial Narrow", serif;
+    border: 1px solid black;
+    text-align: right;
+    padding-right: 3px;
+}
+
+.barrel_table{
+    width: 70%;
+    float: right;
+
+}
+
+.num_cells{
+    width: 100%;
+    background: rgb(235, 241, 253);
+    border: 0;
+    text-align: center;
+}
+
+div.submit_table{
+    margin-left: 51.5%;
+}
